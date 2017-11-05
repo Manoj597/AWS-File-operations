@@ -1,0 +1,39 @@
+<html>
+<head>
+<style type="text/css">
+b{
+	color:red;
+}
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<h1>Upload File on S3 AWS</h1>
+<form method="post" action="{{ url_for('upload') }}" class="form-group">
+<input type="file" name="uploadfile"><br>
+<input type="submit" value="Upload File" class="btn btn-primary"><br>
+<div>
+<h4>All Files present in S3 AWS storage</h4>
+<table class="table table-striped">
+<tr><td>Name</td><td>Last Modified</td></tr>
+{% if keys %}
+{% for files in keys %}
+<tr>
+<td><a href="{{ url_for('download',file_name=files.name) }}">{{ files.name }}</a></td>
+<td>{{ files.last_modified }}</td>
+</tr>
+{% endfor %}
+{% endif %}
+</table>
+</div>
+<div><b>
+{% if message1 %}
+{{ message1 }}
+{% endif %}
+{% if message %}
+{{ message }}
+{% endif %}
+</b></div>
+</form>
+</body>
+</html>

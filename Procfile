@@ -1,0 +1,1 @@
+web: python s3_store.py
