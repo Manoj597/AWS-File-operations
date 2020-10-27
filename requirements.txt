@@ -15,7 +15,7 @@ chardet==3.0.3
 click==6.7
 cloudant==2.4.0
 colorama==0.3.7
-cryptography==1.9
+cryptography==3.2
 cryptoshop==2.0.1
 cycler==0.10.0
 debtcollector==1.14.0
