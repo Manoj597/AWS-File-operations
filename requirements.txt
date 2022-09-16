@@ -65,7 +65,7 @@ numpy==1.12.1+mkl
 oslo.config==4.3.0
 oslo.i18n==3.15.3
 oslo.serialization==2.18.0
-oslo.utils==3.26.0
+oslo.utils==4.10.1
 packaging==16.8
 pandas==0.19.2
 pandocfilters==1.4.1
